@@ -1,0 +1,15 @@
+---
+title: "Learning to reference figures, tables and sections"
+author: "Smriti Bhat"
+date: "3/24/2021"
+output:
+bookdown::html_document2
+keep_md: true
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
