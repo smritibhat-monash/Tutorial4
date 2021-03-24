@@ -3,13 +3,34 @@ title: "Learning to reference figures, tables and sections"
 author: "Smriti Bhat"
 date: "3/24/2021"
 output:
-bookdown::html_document2
+  bookdown::html_document2
 keep_md: true
 
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, fig.align='center'}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+library(tidyverse)
+library(bookdown)
+```
+## Learning to reference figures
 
+```{r Figref, fig.cap = "This is random noise"}
+x = seq(1:100)
+y = rnorm(100)
+dat = data.frame(x, y)
+ggplot(dat, aes(x = x, y = y)) +
+geom_line()
+```
+
+The above Figure \@ref(fig:Figref) is some random plot.
+
+## Learning to reference tables
+
+```{r newtable}
+dat_tbl <- head(dat,5)
+```
+The above table \@ref(tab:newtable) is 5 observations of the overall table on which above plot was created
